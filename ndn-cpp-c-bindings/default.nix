@@ -7,4 +7,4 @@ let
   inherit (racket2nix) buildRacketPackage;
 in
 
-(buildRacketPackage ./.).overrideAttrs (oldAttrs: { buildInputs = oldAttrs.buildInputs ++ [ ndn-cpp ]; })
+(buildRacketPackage ./.).overrideAttrs (oldAttrs: { LD_LIBRARY_PATH = "${ndn-cpp}/lib"; })
