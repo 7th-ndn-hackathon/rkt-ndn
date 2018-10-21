@@ -16,7 +16,6 @@ stdenv.mkDerivation {
   enableParallelBuilding = true;
   nativeBuildInputs = [ doxygen pkgconfig protobuf ];
   buildInputs = [ openssl zlib ];
-#  patches = [ ./ndn-cpp.diff ];
 
   meta = with stdenv.lib; {
     homepage = http://named-data.net/;
